@@ -47,7 +47,7 @@ export function Footer() {
                 <span className="text-accent font-bold text-xl">GE</span>
               </div>
               <div>
-                <h3 className="font-bold text-xl">GlobalExport</h3>
+                <h3 className="font-bold text-xl">Dudhani Overseas</h3>
                 <p className="text-sm text-primary-foreground/70">Trading Solutions</p>
               </div>
             </div>
@@ -58,15 +58,15 @@ export function Footer() {
             <div className="space-y-3">
               <a href="tel:+911234567890" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
                 <Phone className="h-5 w-5" />
-                +91 123 456 7890
+                +91-9560110667
               </a>
               <a href="mailto:info@globalexport.com" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
                 <Mail className="h-5 w-5" />
-                info@globalexport.com
+                info@doipl.in
               </a>
               <div className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="h-5 w-5 mt-0.5" />
-                <span>123 Export Tower, Business District<br />Mumbai, Maharashtra 400001, India</span>
+                <span>Sarai Road Gandhi Maidan<br />near reliance mall Dumka Jharkhand 814101</span>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@ export function Footer() {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-primary-foreground/60">
-              © {new Date().getFullYear()} GlobalExport Trading Solutions. All rights reserved.
+              © {new Date().getFullYear()} Dudhani Overseas. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
