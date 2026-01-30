@@ -91,12 +91,11 @@ export default function About() {
               </div>
               <h2 className="text-2xl font-bold mb-4 text-foreground">Our Mission</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To be a dominant multi-location
-production company in Engineered 
-Thermoplastic Compounds, Color & 
-Specialty Additive Master Batches thus
-establishing itself as a top-performing
- compounder with multiple product range and developing new applications close to OEMs and associated sectors of Automotive, Railway, Defense, Furniture & House Hold.
+                To be a dominant multi-location production company in Engineered 
+                 Thermoplastic Compounds, Color &  Specialty Additive Master Batches thus
+                 establishing itself as a top-performing compounder with multiple product range 
+                and developing new applications close to OEMs and associated sectors of 
+                Automotive, Railway, Defense, Furniture & House Hold.
               </p>
             </div>
             <div className="bg-muted rounded-2xl p-8">
@@ -105,9 +104,10 @@ establishing itself as a top-performing
               </div>
               <h2 className="text-2xl font-bold mb-4 text-foreground">Our Vision</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To become the most trusted and preferred export partner for businesses worldwide, 
-                recognized for our commitment to quality, reliability, and innovation. We envision 
-                a world where geographical boundaries don't limit access to premium Indian products.
+                 To provide the highest quality materials based on advanced technology 
+                 to our customers and ensuring to meet the challenging and ever-increasing market demands.
+                 To respect the strength and capability of our employees, customers, and associates.
+                 To honor all commitments we undertake.
               </p>
             </div>
           </div>
