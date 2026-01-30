@@ -91,10 +91,12 @@ export default function About() {
               </div>
               <h2 className="text-2xl font-bold mb-4 text-foreground">Our Mission</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To be the bridge between Indian excellence and global markets, providing seamless 
-                export solutions that enable businesses to source quality products with confidence. 
-                We are committed to maintaining the highest standards of quality, compliance, and 
-                customer service in every transaction.
+                To be a dominant multi-location
+production company in Engineered 
+Thermoplastic Compounds, Color & 
+Specialty Additive Master Batches thus
+establishing itself as a top-performing
+ compounder with multiple product range and developing new applications close to OEMs and associated sectors of Automotive, Railway, Defense, Furniture & House Hold.
               </p>
             </div>
             <div className="bg-muted rounded-2xl p-8">
