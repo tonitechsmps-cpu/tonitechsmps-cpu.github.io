@@ -93,7 +93,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Phone</h4>
                     <a href="tel:+911234567890" className="text-muted-foreground hover:text-secondary transition-colors">
-                      +91 123 456 7890
+                       +91-9560110667
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">Mon-Sat, 9:00 AM - 6:00 PM IST</p>
                   </div>
@@ -106,7 +106,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
                     <a href="mailto:info@globalexport.com" className="text-muted-foreground hover:text-secondary transition-colors">
-                      info@globalexport.com
+                      info@doipl.in
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                   </div>
@@ -119,9 +119,9 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Address</h4>
                     <p className="text-muted-foreground">
-                      123 Export Tower, Business District<br />
-                      Mumbai, Maharashtra 400001<br />
-                      India
+                      Sarai Road Gandhi Maidan <br />
+                      near reliance mall<br />
+                      Dumka Jharkhand 814101
                     </p>
                   </div>
                 </div>
