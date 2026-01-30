@@ -44,7 +44,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-primary-foreground/10 flex items-center justify-center">
-                <span className="text-accent font-bold text-xl">GE</span>
+                <span className="text-accent font-bold text-xl">DO</span>
               </div>
               <div>
                 <h3 className="font-bold text-xl">Dudhani Overseas</h3>
