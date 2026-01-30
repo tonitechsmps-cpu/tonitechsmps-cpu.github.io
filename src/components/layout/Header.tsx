@@ -39,11 +39,11 @@ export function Header() {
           <div className="hidden sm:flex items-center gap-6">
             <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              +91 123 456 7890
+              +91-9560110667
             </a>
-            <a href="mailto:info@globalexport.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="mailto:info@doipl.in" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4" />
-              info@globalexport.com
+              info@doipl.in
             </a>
           </div>
           <div className="flex items-center gap-4 text-xs sm:text-sm w-full sm:w-auto justify-center sm:justify-end">
@@ -62,7 +62,7 @@ export function Header() {
                 <span className="text-primary-foreground font-bold text-lg lg:text-xl">GE</span>
               </div>
               <div className="hidden sm:block">
-                <h1 className="font-bold text-lg lg:text-xl text-foreground">GlobalExport</h1>
+                <h1 className="font-bold text-lg lg:text-xl text-foreground">Dudhani Overseas</h1>
                 <p className="text-xs text-muted-foreground">Trading Solutions</p>
               </div>
             </Link>
