@@ -94,7 +94,10 @@ export default function About() {
                 To provide the highest quality materials based on advanced technology 
                  to our customers and ensuring to meet the challenging and ever-increasing market demands.
                  To respect the strength and capability of our employees, customers, and associates.
-                 To honor all commitments we undertake.
+                 To honor all commitments we undertake. To provide the Plastic Processing Industry with 
+                quality Masterbatches & Compounds that effectively cater & meet their application / processing 
+                requirements. Emphasizing on quality, customer need and service excellence, we work 
+                for total customer satisfaction.
               </p>
             </div>
             <div className="bg-muted rounded-2xl p-8">
