@@ -59,7 +59,7 @@ export function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
               <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg lg:text-xl">GE</span>
+                <span className="text-primary-foreground font-bold text-lg lg:text-xl">DO</span>
               </div>
               <div className="hidden sm:block">
                 <h1 className="font-bold text-lg lg:text-xl text-foreground">Dudhani Overseas</h1>
