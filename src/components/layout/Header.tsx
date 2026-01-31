@@ -37,9 +37,6 @@ export function Header() {
       <div className="bg-primary text-primary-foreground">
         <div className="container-custom flex items-center justify-between py-2 text-sm">
           <div className="hidden sm:flex items-center gap-6">
-            <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Phone className="h-4 w-4" />
-            </a>
             <a href="mailto:info@doipl.in" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4" />
               info@doipl.in
