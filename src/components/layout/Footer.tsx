@@ -56,10 +56,6 @@ export function Footer() {
               to over 50 countries with complete documentation and logistics support.
             </p>
             <div className="space-y-3">
-              <a href="tel:+91-9560110667" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
-                <Phone className="h-5 w-5" />
-                +91-9560110667
-              </a>
               <a href="mailto:info@globalexport.com" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
                 <Mail className="h-5 w-5" />
                 info@doipl.in
