@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -14,8 +14,8 @@ const countries = [
 ];
 
 const productCategories = [
-  'Agricultural Products', 'Industrial Goods', 'Textiles & Fabrics',
-  'Handicrafts', 'Chemicals & Pharmaceuticals', 'Food & Beverages', 'Other'
+  'White Masterbatch', 'Black Masterbatch', 'Color Masterbatch',
+  'PE/PP Masterbatch', 'Engineering Polymers', 'Additive Masterbatch', 'Other'
 ];
 
 export default function Contact() {
@@ -65,7 +65,7 @@ export default function Contact() {
               Let's Start a Conversation
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              Have questions about our products or services? We're here to help you with your export needs.
+              Have questions about our masterbatches or polymer compounds? We're here to help you with your requirements.
             </p>
           </div>
         </div>
@@ -92,8 +92,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                    <a href="tel:+911234567890" className="text-muted-foreground hover:text-secondary transition-colors">
-                       +91-9560110667
+                    <a href="tel:+916287585752" className="text-muted-foreground hover:text-secondary transition-colors">
+                      +91-6287585752
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">Mon-Sat, 9:00 AM - 6:00 PM IST</p>
                   </div>
@@ -105,8 +105,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                    <a href="mailto:info@globalexport.com" className="text-muted-foreground hover:text-secondary transition-colors">
-                      info@doipl.in
+                    <a href="mailto:rabindrasharmarks@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors">
+                      rabindrasharmarks@gmail.com
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                   </div>
@@ -119,9 +119,9 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Address</h4>
                     <p className="text-muted-foreground">
-                      Sarai Road Gandhi Maidan <br />
-                      near reliance mall<br />
-                      Dumka Jharkhand 814101
+                      Sarai Road Gandhi Maidan<br />
+                      near Reliance Mall<br />
+                      Dumka, Jharkhand 814101
                     </p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
                     <a 
-                      href="https://wa.me/911234567890" 
+                      href="https://wa.me/916287585752" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-green-600 hover:text-green-700 transition-colors"
@@ -163,6 +163,21 @@ export default function Contact() {
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Sunday</span>
                     <span className="text-foreground">Closed</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Company Registration */}
+              <div className="bg-muted rounded-2xl p-6">
+                <h4 className="font-semibold text-foreground mb-4">Company Details</h4>
+                <div className="space-y-2 text-sm">
+                  <div>
+                    <span className="text-muted-foreground">CIN: </span>
+                    <span className="text-foreground">U24304JH2018PTC011591</span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground">GSTIN: </span>
+                    <span className="text-foreground">07AAGCD7615P1Z5</span>
                   </div>
                 </div>
               </div>
@@ -201,7 +216,7 @@ export default function Contact() {
                             required
                             value={formData.name}
                             onChange={(e) => handleChange('name', e.target.value)}
-                            placeholder="John Smith"
+                            placeholder="Your Name"
                           />
                         </div>
                         <div>
@@ -213,7 +228,7 @@ export default function Contact() {
                             required
                             value={formData.email}
                             onChange={(e) => handleChange('email', e.target.value)}
-                            placeholder="john@company.com"
+                            placeholder="your@email.com"
                           />
                         </div>
                       </div>
@@ -316,8 +331,8 @@ export default function Contact() {
             <div className="rounded-2xl overflow-hidden bg-muted h-[400px] flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-16 w-16 text-muted-foreground/30 mx-auto mb-4" />
-                <p className="text-muted-foreground">Interactive map would be displayed here</p>
-                <p className="text-sm text-muted-foreground">Mumbai, Maharashtra, India</p>
+                <p className="text-muted-foreground">Dumka, Jharkhand, India</p>
+                <p className="text-sm text-muted-foreground">Sarai Road Gandhi Maidan, near Reliance Mall</p>
               </div>
             </div>
           </div>

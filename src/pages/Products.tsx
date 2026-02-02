@@ -3,127 +3,125 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search, Filter, ArrowRight } from 'lucide-react';
+import { Search, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const categories = [
   { id: 'all', name: 'All Products' },
-  { id: 'agricultural', name: 'Agricultural' },
-  { id: 'industrial', name: 'Industrial' },
-  { id: 'textiles', name: 'Textiles' },
-  { id: 'handicrafts', name: 'Handicrafts' },
-  { id: 'chemicals', name: 'Chemicals' },
-  { id: 'food', name: 'Food & Beverages' },
+  { id: 'color-masterbatch', name: 'Color Masterbatch' },
+  { id: 'polymer-compounds', name: 'Polymer Compounds' },
+  { id: 'engineering-polymers', name: 'Engineering Polymers' },
+  { id: 'specialty', name: 'Specialty' },
 ];
 
 const products = [
   {
-    id: 'basmati-rice',
-    name: 'Premium Basmati Rice',
-    category: 'agricultural',
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=300&fit=crop',
-    description: 'Extra-long grain aromatic rice, aged for superior quality',
-    hsCode: '1006.30',
-    moq: '20 MT',
-  },
-  {
-    id: 'turmeric-powder',
-    name: 'Organic Turmeric Powder',
-    category: 'agricultural',
-    image: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&h=300&fit=crop',
-    description: 'High curcumin content, certified organic turmeric',
-    hsCode: '0910.30',
-    moq: '5 MT',
-  },
-  {
-    id: 'cotton-fabric',
-    name: 'Premium Cotton Fabric',
-    category: 'textiles',
-    image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop',
-    description: '100% cotton fabric, various GSM and weave patterns',
-    hsCode: '5208.12',
-    moq: '5000 meters',
-  },
-  {
-    id: 'machine-parts',
-    name: 'Industrial Machine Parts',
-    category: 'industrial',
-    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=300&fit=crop',
-    description: 'Precision-engineered machine components',
-    hsCode: '8483.40',
-    moq: '500 units',
-  },
-  {
-    id: 'brass-handicraft',
-    name: 'Brass Handicrafts',
-    category: 'handicrafts',
-    image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=300&fit=crop',
-    description: 'Traditional Indian brass decorative items',
-    hsCode: '8306.29',
-    moq: '200 pieces',
-  },
-  {
-    id: 'organic-honey',
-    name: 'Organic Forest Honey',
-    category: 'food',
-    image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=300&fit=crop',
-    description: 'Pure, unprocessed organic honey from Indian forests',
-    hsCode: '0409.00',
-    moq: '1 MT',
-  },
-  {
-    id: 'chemicals-dye',
-    name: 'Industrial Dyes',
-    category: 'chemicals',
-    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop',
-    description: 'Eco-friendly textile dyes and pigments',
-    hsCode: '3204.17',
+    id: 'white-masterbatch',
+    name: 'White Masterbatch',
+    category: 'color-masterbatch',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
+    description: 'High quality titanium dioxide based white masterbatch for superior opacity and brightness',
+    hsCode: '3901.20',
     moq: '500 kg',
   },
   {
-    id: 'cashew-nuts',
-    name: 'Premium Cashew Nuts',
-    category: 'agricultural',
-    image: 'https://images.unsplash.com/photo-1509358271058-aedd22840a0d?w=400&h=300&fit=crop',
-    description: 'Grade W180, W240, and W320 cashew kernels',
-    hsCode: '0801.32',
-    moq: '10 MT',
+    id: 'black-masterbatch',
+    name: 'Black Masterbatch',
+    category: 'color-masterbatch',
+    image: 'https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=400&h=300&fit=crop',
+    description: 'Carbon black based masterbatch for various polymers with excellent dispersion',
+    hsCode: '3901.20',
+    moq: '500 kg',
   },
   {
-    id: 'silk-saree',
-    name: 'Handwoven Silk Sarees',
-    category: 'textiles',
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=300&fit=crop',
-    description: 'Traditional Banarasi and Kanchipuram silk sarees',
-    hsCode: '5007.20',
-    moq: '100 pieces',
+    id: 'color-masterbatch',
+    name: 'Color Masterbatch',
+    category: 'color-masterbatch',
+    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=300&fit=crop',
+    description: 'Custom color masterbatches in wide range of colors with precise color matching',
+    hsCode: '3901.20',
+    moq: '250 kg',
   },
   {
-    id: 'steel-pipes',
-    name: 'Stainless Steel Pipes',
-    category: 'industrial',
+    id: 'pe-masterbatch',
+    name: 'PE Masterbatch',
+    category: 'polymer-compounds',
+    image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=400&h=300&fit=crop',
+    description: 'HDPE/LLDPE/LDPE based masterbatches for film, pipe, and molding applications',
+    hsCode: '3901.10',
+    moq: '500 kg',
+  },
+  {
+    id: 'pp-masterbatch',
+    name: 'PP Masterbatch',
+    category: 'polymer-compounds',
+    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop',
+    description: 'Polypropylene based masterbatches for injection molding and fiber applications',
+    hsCode: '3902.10',
+    moq: '500 kg',
+  },
+  {
+    id: 'abs-compounds',
+    name: 'ABS/SAN/ASA Compounds',
+    category: 'engineering-polymers',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
+    description: 'High-performance ABS, SAN, and ASA compounds for automotive and electronics',
+    hsCode: '3903.30',
+    moq: '1000 kg',
+  },
+  {
+    id: 'pc-compounds',
+    name: 'PC Compounds',
+    category: 'engineering-polymers',
+    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=300&fit=crop',
+    description: 'Polycarbonate based compounds with excellent impact resistance and clarity',
+    hsCode: '3907.40',
+    moq: '1000 kg',
+  },
+  {
+    id: 'pet-compounds',
+    name: 'PET Compounds',
+    category: 'engineering-polymers',
     image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop',
-    description: 'SS304 and SS316 grade pipes and tubes',
-    hsCode: '7306.40',
-    moq: '10 MT',
+    description: 'Polyethylene terephthalate compounds for packaging and fiber applications',
+    hsCode: '3907.60',
+    moq: '1000 kg',
   },
   {
-    id: 'spices-mix',
-    name: 'Indian Spice Collection',
-    category: 'food',
+    id: 'eva-masterbatch',
+    name: 'EVA Masterbatch',
+    category: 'specialty',
+    image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop',
+    description: 'Ethylene vinyl acetate masterbatches for footwear and foam applications',
+    hsCode: '3901.30',
+    moq: '500 kg',
+  },
+  {
+    id: 'tpu-compounds',
+    name: 'TPU Compounds',
+    category: 'specialty',
+    image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=300&fit=crop',
+    description: 'Thermoplastic polyurethane compounds for flexible and durable applications',
+    hsCode: '3909.50',
+    moq: '500 kg',
+  },
+  {
+    id: 'pa-compounds',
+    name: 'PA Compounds',
+    category: 'specialty',
+    image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=300&fit=crop',
+    description: 'Polyamide (Nylon) compounds for engineering and automotive applications',
+    hsCode: '3908.10',
+    moq: '1000 kg',
+  },
+  {
+    id: 'additive-masterbatch',
+    name: 'Additive Masterbatch',
+    category: 'specialty',
     image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=300&fit=crop',
-    description: 'Premium blended spices and masalas',
-    hsCode: '0910.99',
-    moq: '2 MT',
-  },
-  {
-    id: 'marble-products',
-    name: 'Marble Handicrafts',
-    category: 'handicrafts',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop',
-    description: 'Hand-carved Makrana marble products',
-    hsCode: '6802.91',
-    moq: '100 pieces',
+    description: 'UV stabilizers, antioxidants, flame retardants and processing aids',
+    hsCode: '3901.90',
+    moq: '250 kg',
   },
 ];
 
@@ -148,10 +146,11 @@ export default function Products() {
           <div className="max-w-3xl">
             <span className="text-accent font-semibold uppercase tracking-wider text-sm">Our Products</span>
             <h1 className="text-4xl sm:text-5xl font-bold mt-2 mb-4">
-              Export Quality Products
+              Masterbatches & Polymer Compounds
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              Explore our diverse range of premium Indian products ready for global export.
+              High-quality color masterbatches, polymer compounds, and specialty additives 
+              for diverse industrial applications.
             </p>
           </div>
         </div>
@@ -213,7 +212,7 @@ export default function Products() {
                     />
                     <div className="absolute top-3 left-3">
                       <span className="px-3 py-1 rounded-full bg-secondary/90 text-secondary-foreground text-xs font-medium capitalize">
-                        {product.category}
+                        {product.category.replace('-', ' ')}
                       </span>
                     </div>
                   </div>
@@ -246,14 +245,14 @@ export default function Products() {
       {/* CTA */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-4">Can't Find What You're Looking For?</h2>
+          <h2 className="text-3xl font-bold mb-4">Need Custom Formulations?</h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            We source a wide variety of products beyond what's listed. Contact us with your 
-            requirements and we'll help you find the right products.
+            We offer custom color matching and formulation services. Contact us with your 
+            specifications and our technical team will develop the perfect solution.
           </p>
           <Button variant="hero" size="lg" asChild>
             <Link to="/contact">
-              Send Product Inquiry
+              Request Custom Quote
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
