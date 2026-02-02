@@ -7,46 +7,32 @@ import heroBg from '@/assets/hero-bg.jpg';
 // Product Categories
 const productCategories = [
   {
-    id: 'agricultural',
-    name: 'Agricultural Products',
-    description: 'Premium grains, spices, and organic produce',
-    icon: '🌾',
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=300&fit=crop',
+    id: 'color-masterbatch',
+    name: 'Color Masterbatch',
+    description: 'White, black, and custom color masterbatches',
+    icon: '🎨',
+    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=300&fit=crop',
   },
   {
-    id: 'industrial',
-    name: 'Industrial Goods',
-    description: 'Quality machinery parts and raw materials',
+    id: 'polymer-compounds',
+    name: 'Polymer Compounds',
+    description: 'PE, PP, and specialty polymer compounds',
+    icon: '⚗️',
+    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop',
+  },
+  {
+    id: 'engineering-polymers',
+    name: 'Engineering Polymers',
+    description: 'ABS, PC, PET, and PA compounds',
     icon: '⚙️',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
   },
   {
-    id: 'textiles',
-    name: 'Textiles & Fabrics',
-    description: 'Traditional and modern textile solutions',
-    icon: '🧵',
+    id: 'specialty',
+    name: 'Specialty Products',
+    description: 'EVA, TPU, and additive masterbatches',
+    icon: '✨',
     image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop',
-  },
-  {
-    id: 'handicrafts',
-    name: 'Handicrafts',
-    description: 'Authentic Indian artisan products',
-    icon: '🎨',
-    image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=300&fit=crop',
-  },
-  {
-    id: 'chemicals',
-    name: 'Chemicals & Pharmaceuticals',
-    description: 'Certified chemical and pharma exports',
-    icon: '🧪',
-    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop',
-  },
-  {
-    id: 'food',
-    name: 'Food & Beverages',
-    description: 'Premium packaged food products',
-    icon: '🍚',
-    image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=400&h=300&fit=crop',
   },
 ];
 
@@ -71,12 +57,12 @@ const features = [
   {
     icon: Shield,
     title: 'Quality Assured',
-    description: 'Rigorous quality control at every stage ensures only the best products reach our clients.',
+    description: 'ISO 9001 certified with rigorous quality control at every stage of production.',
   },
   {
     icon: Award,
     title: 'Certified & Compliant',
-    description: 'All exports meet international standards with proper certifications and documentation.',
+    description: 'ISO 9001, ISO 14001, ISO 45001, and UL certified for international standards.',
   },
   {
     icon: Clock,
@@ -86,51 +72,51 @@ const features = [
   {
     icon: Globe,
     title: 'Global Network',
-    description: '50+ countries served with established trade relationships and local expertise.',
+    description: '30+ countries served with established trade relationships and local expertise.',
   },
 ];
 
 // Certifications
 const certifications = [
-  { name: 'IEC', description: 'Import Export Code' },
   { name: 'ISO 9001', description: 'Quality Management' },
-  { name: 'APEDA', description: 'Agricultural Export' },
-  { name: 'FSSAI', description: 'Food Safety' },
-  { name: 'BIS', description: 'Bureau of Indian Standards' },
-  { name: 'FIEO', description: 'Federation of Export' },
+  { name: 'ISO 14001', description: 'Environmental' },
+  { name: 'ISO 45001', description: 'Health & Safety' },
+  { name: 'UL Certified', description: 'Safety Standards' },
+  { name: 'IEC', description: 'Export License' },
+  { name: 'NABL', description: 'Lab Accreditation' },
 ];
 
 // Testimonials
 const testimonials = [
   {
-    quote: "GlobalExport has been our trusted partner for over 5 years. Their commitment to quality and timely delivery is unmatched.",
-    author: "James Mitchell",
-    role: "Procurement Director",
-    company: "TechCorp Industries, USA",
+    quote: "Dudhani Overseas has been our reliable masterbatch supplier for 3 years. Their consistent quality and technical support are exceptional.",
+    author: "Manufacturing Director",
+    role: "Automotive Components",
+    company: "Leading Auto Parts Manufacturer",
     rating: 5,
   },
   {
-    quote: "The documentation support and compliance handling made our first import from India completely hassle-free.",
-    author: "Sarah Schmidt",
-    role: "Supply Chain Manager",
-    company: "EuroTrade GmbH, Germany",
+    quote: "The color matching accuracy and dispersion quality of their masterbatches have significantly improved our product aesthetics.",
+    author: "Quality Manager",
+    role: "Packaging Industry",
+    company: "Major Packaging Company",
     rating: 5,
   },
   {
-    quote: "Exceptional product quality and professional service. They understand international trade requirements perfectly.",
-    author: "Ahmed Al-Rashid",
-    role: "CEO",
-    company: "Gulf Imports LLC, UAE",
+    quote: "Professional team with deep technical knowledge. They helped us optimize our formulations for better performance.",
+    author: "Technical Head",
+    role: "Consumer Goods",
+    company: "Household Products Manufacturer",
     rating: 5,
   },
 ];
 
 // Statistics
 const stats = [
-  { value: '50+', label: 'Countries Served' },
-  { value: '1000+', label: 'Products Exported' },
+  { value: '30+', label: 'Countries Served' },
+  { value: '100+', label: 'Products Range' },
   { value: '500+', label: 'Happy Clients' },
-  { value: '15+', label: 'Years Experience' },
+  { value: '6+', label: 'Years Experience' },
 ];
 
 export default function Index() {
@@ -148,17 +134,17 @@ export default function Index() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-6 animate-fade-up">
               <Ship className="h-4 w-4 text-accent" />
-              <span className="text-sm text-primary-foreground/90">Trusted Export Partner Since 2009</span>
+              <span className="text-sm text-primary-foreground/90">Trusted Manufacturer Since 2018</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-fade-up leading-tight">
-              Reliable Global Export Solutions from{' '}
-              <span className="text-accent">India</span>
+              Premium Masterbatches &{' '}
+              <span className="text-accent">Polymer Compounds</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-primary-foreground/80 mb-8 animate-fade-up max-w-2xl">
-              Your trusted partner for premium quality products, seamless logistics, and 
-              complete export documentation. Connecting Indian excellence to global markets.
+              Leading manufacturer of color masterbatches, engineering polymer compounds, and 
+              specialty additives. Serving global markets with quality and innovation.
             </p>
             
             <div className="flex flex-wrap gap-4 animate-fade-up">
@@ -195,17 +181,18 @@ export default function Index() {
             <div>
               <span className="text-secondary font-semibold uppercase tracking-wider text-sm">About Us</span>
               <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-6 text-foreground">
-                India's Premier Export & Trading Company
+                Dudhani Overseas India Private Limited
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Established in 2009, GlobalExport has grown to become one of India's most trusted 
-                export companies. We specialize in sourcing, quality control, and export of diverse 
-                product categories to over 50 countries worldwide.
+                Established in 2018, Dudhani Overseas has grown to become a trusted manufacturer 
+                of high-quality masterbatches and polymer compounds. We specialize in color 
+                masterbatches, engineering polymers, and specialty additives for diverse 
+                industrial applications.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Our commitment to quality, compliance, and customer satisfaction has earned us 
-                long-term partnerships with businesses across North America, Europe, Middle East, 
-                and Asia-Pacific regions.
+                Our commitment to quality, innovation, and customer satisfaction has earned us 
+                long-term partnerships with businesses across automotive, packaging, consumer 
+                goods, and industrial sectors worldwide.
               </p>
               <Button variant="outline" asChild>
                 <Link to="/about">
@@ -218,15 +205,15 @@ export default function Index() {
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop" 
-                    alt="Warehouse"
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop" 
+                    alt="Manufacturing"
                     className="w-full h-48 object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=400&h=300&fit=crop" 
-                    alt="Shipping"
+                    src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop" 
+                    alt="Laboratory"
                     className="w-full h-32 object-cover"
                   />
                 </div>
@@ -234,15 +221,15 @@ export default function Index() {
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=400&h=300&fit=crop" 
-                    alt="Global Trade"
+                    src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=300&fit=crop" 
+                    alt="Production"
                     className="w-full h-32 object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=300&fit=crop" 
-                    alt="Quality Check"
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" 
+                    alt="Quality Control"
                     className="w-full h-48 object-cover"
                   />
                 </div>
@@ -258,15 +245,15 @@ export default function Index() {
           <div className="text-center mb-12">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Our Products</span>
             <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4 text-foreground">
-              Export Product Categories
+              Product Categories
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We source and export a wide range of quality products across multiple categories, 
-              ensuring the best of India reaches global markets.
+              We manufacture a comprehensive range of masterbatches and polymer compounds 
+              to meet diverse industrial requirements.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {productCategories.map((category) => (
               <Link
                 key={category.id}
@@ -312,8 +299,8 @@ export default function Index() {
               Countries We Export To
             </h2>
             <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-              Our extensive network spans across continents, delivering Indian products to 
-              businesses in over 50 countries.
+              Our extensive network spans across continents, delivering quality masterbatches 
+              and compounds to businesses in over 30 countries.
             </p>
           </div>
 
@@ -330,7 +317,7 @@ export default function Index() {
           </div>
 
           <div className="text-center">
-            <p className="text-primary-foreground/60 mb-4">And 40+ more countries across the globe</p>
+            <p className="text-primary-foreground/60 mb-4">And 20+ more countries across the globe</p>
             <Button variant="heroOutline" asChild>
               <Link to="/export-capabilities">
                 Explore Our Export Capabilities
@@ -346,11 +333,11 @@ export default function Index() {
           <div className="text-center mb-12">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
             <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4 text-foreground">
-              Your Trusted Export Partner
+              Your Trusted Manufacturing Partner
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               We combine industry expertise with commitment to excellence, ensuring every 
-              export transaction exceeds expectations.
+              product meets the highest quality standards.
             </p>
           </div>
 
@@ -381,7 +368,7 @@ export default function Index() {
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               We maintain all necessary certifications and compliance standards for 
-              seamless international trade.
+              quality assurance and international trade.
             </p>
           </div>
 
@@ -433,11 +420,13 @@ export default function Index() {
                     <Star key={i} className="h-5 w-5 fill-accent text-accent" />
                   ))}
                 </div>
-                <p className="text-foreground mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-muted-foreground mb-6 italic">
+                  "{testimonial.quote}"
+                </p>
                 <div>
                   <p className="font-semibold text-foreground">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  <p className="text-sm text-secondary">{testimonial.company}</p>
+                  <p className="text-sm text-secondary">{testimonial.role}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                 </div>
               </div>
             ))}
@@ -446,26 +435,26 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground">
+      <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-custom text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Ready to Start Exporting?
+            Ready to Partner With Us?
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Get in touch with our export specialists today. We'll help you source the 
-            right products and handle all logistics and documentation.
+            Get in touch with our team to discuss your masterbatch and compound requirements. 
+            We offer competitive pricing and reliable delivery worldwide.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="hero" size="xl" asChild>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
                 Request a Quote
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <a href="tel:+911234567890">
-                Call Us Now
-              </a>
+            <Button variant="heroOutline" size="lg" asChild>
+              <Link to="/products">
+                View Products
+              </Link>
             </Button>
           </div>
         </div>

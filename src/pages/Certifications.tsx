@@ -1,64 +1,75 @@
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Award, Shield, CheckCircle, ChevronRight, FileCheck, Globe } from 'lucide-react';
+import { Award, Shield, CheckCircle, ChevronRight, FileCheck, Globe, Leaf, Users } from 'lucide-react';
 
 const certifications = [
+  {
+    name: 'ISO 9001:2015',
+    fullName: 'Quality Management System',
+    description: 'Internationally recognized standard for quality management ensuring consistent product quality and customer satisfaction.',
+    icon: Award,
+  },
+  {
+    name: 'ISO 14001',
+    fullName: 'Environmental Management System',
+    description: 'Commitment to environmental responsibility and sustainable manufacturing practices.',
+    icon: Leaf,
+  },
+  {
+    name: 'ISO 45001',
+    fullName: 'Occupational Health & Safety',
+    description: 'Ensuring safe and healthy workplace conditions for all employees and stakeholders.',
+    icon: Users,
+  },
+  {
+    name: 'UL Certified',
+    fullName: 'Underwriters Laboratories',
+    description: 'International safety certification for products meeting rigorous safety standards.',
+    icon: Shield,
+  },
+  {
+    name: 'NABL Accredited',
+    fullName: 'Autodynamics Technologies',
+    description: 'Laboratory testing accreditation ensuring accurate and reliable quality testing.',
+    icon: FileCheck,
+  },
   {
     name: 'IEC',
     fullName: 'Importer Exporter Code',
     description: 'Official registration with DGFT for conducting international trade from India.',
     icon: Globe,
   },
-  {
-    name: 'ISO 9001:2015',
-    fullName: 'Quality Management System',
-    description: 'Internationally recognized standard for quality management ensuring consistent product quality.',
-    icon: Award,
-  },
-  {
-    name: 'APEDA',
-    fullName: 'Agricultural & Processed Food Products Export Development Authority',
-    description: 'Registered exporter for agricultural and processed food products.',
-    icon: Shield,
-  },
-  {
-    name: 'FSSAI',
-    fullName: 'Food Safety and Standards Authority of India',
-    description: 'Compliance with Indian food safety regulations for food product exports.',
-    icon: CheckCircle,
-  },
-  {
-    name: 'BIS',
-    fullName: 'Bureau of Indian Standards',
-    description: 'Products meet Indian quality standards and specifications.',
-    icon: FileCheck,
-  },
-  {
-    name: 'FIEO',
-    fullName: 'Federation of Indian Export Organisations',
-    description: 'Member of premier trade promotion organization in India.',
-    icon: Globe,
-  },
 ];
 
 const complianceAreas = [
   {
-    title: 'Product Safety',
-    items: ['Quality testing', 'Safety certifications', 'Compliance documentation', 'Lab reports'],
+    title: 'Quality Standards',
+    items: ['TiO2 content testing', 'Melt flow analysis', 'Color consistency', 'Dispersion quality'],
   },
   {
-    title: 'Export Regulations',
-    items: ['DGFT compliance', 'Customs regulations', 'Trade agreements', 'Sanctions screening'],
+    title: 'Environmental',
+    items: ['RoHS compliance', 'REACH regulations', 'Eco-friendly formulations', 'Waste management'],
   },
   {
     title: 'Documentation',
-    items: ['Certificate of Origin', 'Phytosanitary certificates', 'Health certificates', 'Inspection reports'],
+    items: ['Certificate of Analysis', 'Material Safety Data Sheets', 'Technical Data Sheets', 'Batch traceability'],
   },
   {
     title: 'Industry Standards',
-    items: ['ISO compliance', 'Industry-specific standards', 'Destination country requirements', 'Buyer specifications'],
+    items: ['Automotive OEM specs', 'Packaging regulations', 'Food contact compliance', 'Electrical safety'],
   },
+];
+
+const testingCapabilities = [
+  'Melt Flow Index (MFI) Testing',
+  'Color Measurement & Matching',
+  'Tensile Strength Analysis',
+  'Impact Resistance Testing',
+  'Heat Deflection Temperature',
+  'Ash Content Determination',
+  'Moisture Content Analysis',
+  'Dispersion Quality Check',
 ];
 
 export default function Certifications() {
@@ -74,7 +85,7 @@ export default function Certifications() {
             </h1>
             <p className="text-xl text-primary-foreground/80">
               We maintain comprehensive certifications and compliance standards to ensure 
-              seamless international trade.
+              the highest quality masterbatches and compounds for our global customers.
             </p>
           </div>
         </div>
@@ -112,8 +123,41 @@ export default function Certifications() {
         </div>
       </section>
 
-      {/* Compliance Areas */}
+      {/* Testing Capabilities */}
       <section className="section-padding bg-muted">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Laboratory</span>
+              <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4 text-foreground">
+                In-House Testing Capabilities
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Our state-of-the-art laboratory is equipped with advanced testing equipment 
+                to ensure every batch meets the highest quality standards before dispatch.
+              </p>
+              <p className="text-muted-foreground mb-8">
+                All testing is conducted by trained technicians following standardized 
+                procedures, with results documented for complete traceability.
+              </p>
+            </div>
+            <div className="bg-card rounded-2xl p-8 shadow-sm">
+              <h3 className="font-semibold text-lg mb-6 text-foreground">Testing Services</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {testingCapabilities.map((test) => (
+                  <div key={test} className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-secondary shrink-0" />
+                    <span className="text-sm text-muted-foreground">{test}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Areas */}
+      <section className="section-padding bg-card">
         <div className="container-custom">
           <div className="text-center mb-12">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Compliance</span>
@@ -121,13 +165,13 @@ export default function Certifications() {
               Our Compliance Framework
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We ensure full compliance across all aspects of international trade.
+              We ensure full compliance across all aspects of manufacturing and international trade.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {complianceAreas.map((area) => (
-              <div key={area.title} className="bg-card rounded-2xl p-6 shadow-sm">
+              <div key={area.title} className="bg-muted rounded-2xl p-6 shadow-sm">
                 <h3 className="font-semibold text-lg mb-4 text-foreground">{area.title}</h3>
                 <ul className="space-y-3">
                   {area.items.map((item) => (
@@ -149,6 +193,7 @@ export default function Certifications() {
           <h2 className="text-3xl font-bold mb-4">Need Specific Certifications?</h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
             Contact us to discuss your specific certification and compliance requirements.
+            We can provide detailed documentation for your products.
           </p>
           <Button variant="hero" size="lg" asChild>
             <Link to="/contact">

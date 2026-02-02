@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
+import { Menu, X, ChevronDown, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import logo from '@/assets/logo.png';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -12,9 +13,9 @@ const navigation = [
     href: '/products',
     children: [
       { name: 'All Products', href: '/products' },
-      { name: 'Agricultural', href: '/products?category=agricultural' },
-      { name: 'Industrial', href: '/products?category=industrial' },
-      { name: 'Textiles', href: '/products?category=textiles' },
+      { name: 'Color Masterbatch', href: '/products?category=color-masterbatch' },
+      { name: 'Polymer Compounds', href: '/products?category=polymer-compounds' },
+      { name: 'Specialty', href: '/products?category=specialty' },
     ]
   },
   { name: 'Export Capabilities', href: '/export-capabilities' },
@@ -37,9 +38,9 @@ export function Header() {
       <div className="bg-primary text-primary-foreground">
         <div className="container-custom flex items-center justify-between py-2 text-sm">
           <div className="hidden sm:flex items-center gap-6">
-            <a href="mailto:info@doipl.in" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="mailto:rabindrasharmarks@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4" />
-              info@doipl.in
+              rabindrasharmarks@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-4 text-xs sm:text-sm w-full sm:w-auto justify-center sm:justify-end">
@@ -54,12 +55,10 @@ export function Header() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg lg:text-xl">DO</span>
-              </div>
+              <img src={logo} alt="Dudhani Overseas" className="w-10 h-10 lg:w-12 lg:h-12 object-contain" />
               <div className="hidden sm:block">
                 <h1 className="font-bold text-lg lg:text-xl text-foreground">Dudhani Overseas</h1>
-                <p className="text-xs text-muted-foreground">Trading Solutions</p>
+                <p className="text-xs text-muted-foreground">India Private Limited</p>
               </div>
             </Link>
 
