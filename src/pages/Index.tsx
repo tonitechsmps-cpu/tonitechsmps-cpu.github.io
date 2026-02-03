@@ -21,18 +21,18 @@ const productCategories = [
     image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop',
   },
   {
-    id: 'engineering-polymers',
-    name: 'Engineering Polymers',
-    description: 'ABS, PC, PET, and PA compounds',
-    icon: '⚙️',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
+    id: 'spices',
+    name: 'Spices & Pulses',
+    description: 'Chana, Mung, Toor, Urad dal and more',
+    icon: '🌾',
+    image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=300&fit=crop',
   },
   {
-    id: 'specialty',
-    name: 'Specialty Products',
-    description: 'EVA, TPU, and additive masterbatches',
-    icon: '✨',
-    image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop',
+    id: 'herbs',
+    name: 'Herbs & Natural',
+    description: 'Aloe Vera, Neem Datun and herbal products',
+    icon: '🌿',
+    image: 'https://images.unsplash.com/photo-1596547609652-9cf5d8c10616?w=400&h=300&fit=crop',
   },
 ];
 

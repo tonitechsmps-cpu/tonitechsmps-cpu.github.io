@@ -38,9 +38,9 @@ export function Header() {
       <div className="bg-primary text-primary-foreground">
         <div className="container-custom flex items-center justify-between py-2 text-sm">
           <div className="hidden sm:flex items-center gap-6">
-            <a href="mailto:rabindrasharmarks@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="mailto:info@doipl.in" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4" />
-              rabindrasharmarks@gmail.com
+              info@doipl.in
             </a>
           </div>
           <div className="flex items-center gap-4 text-xs sm:text-sm w-full sm:w-auto justify-center sm:justify-end">

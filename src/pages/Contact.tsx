@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, MessageCircle, Clock, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, MessageCircle, Clock, Send, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const countries = [
@@ -15,7 +15,8 @@ const countries = [
 
 const productCategories = [
   'White Masterbatch', 'Black Masterbatch', 'Color Masterbatch',
-  'PE/PP Masterbatch', 'Engineering Polymers', 'Additive Masterbatch', 'Other'
+  'PE/PP Masterbatch', 'Engineering Polymers', 'Additive Masterbatch',
+  'Spices (Chana, Mung, etc.)', 'Herbs (Aloe Vera, Neem Datun)', 'Other'
 ];
 
 export default function Contact() {
@@ -88,25 +89,12 @@ export default function Contact() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0">
-                    <Phone className="h-5 w-5 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                    <a href="tel:+916287585752" className="text-muted-foreground hover:text-secondary transition-colors">
-                      +91-6287585752
-                    </a>
-                    <p className="text-sm text-muted-foreground mt-1">Mon-Sat, 9:00 AM - 6:00 PM IST</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0">
                     <Mail className="h-5 w-5 text-secondary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                    <a href="mailto:rabindrasharmarks@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors">
-                      rabindrasharmarks@gmail.com
+                    <a href="mailto:info@doipl.in" className="text-muted-foreground hover:text-secondary transition-colors">
+                      info@doipl.in
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                   </div>
@@ -119,30 +107,12 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Address</h4>
                     <p className="text-muted-foreground">
-                      Sarai Road Gandhi Maidan<br />
-                      near Reliance Mall<br />
-                      Dumka, Jharkhand 814101
+                      Dwarka, Sector - 6<br />
+                      New Delhi 110078, India
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center shrink-0">
-                    <MessageCircle className="h-5 w-5 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
-                    <a 
-                      href="https://wa.me/916287585752" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-green-600 hover:text-green-700 transition-colors"
-                    >
-                      Chat with us on WhatsApp
-                    </a>
-                    <p className="text-sm text-muted-foreground mt-1">Quick responses guaranteed</p>
-                  </div>
-                </div>
               </div>
 
               {/* Office Hours */}
@@ -331,8 +301,8 @@ export default function Contact() {
             <div className="rounded-2xl overflow-hidden bg-muted h-[400px] flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-16 w-16 text-muted-foreground/30 mx-auto mb-4" />
-                <p className="text-muted-foreground">Dumka, Jharkhand, India</p>
-                <p className="text-sm text-muted-foreground">Sarai Road Gandhi Maidan, near Reliance Mall</p>
+                <p className="text-muted-foreground">New Delhi, India</p>
+                <p className="text-sm text-muted-foreground">Dwarka, Sector - 6, New Delhi 110078</p>
               </div>
             </div>
           </div>
