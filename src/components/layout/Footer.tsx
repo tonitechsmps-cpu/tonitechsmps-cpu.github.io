@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const footerLinks = {
@@ -50,17 +50,13 @@ export function Footer() {
               Specialty Additives. Serving global markets with quality products since 2018.
             </p>
             <div className="space-y-3">
-              <a href="tel:+916287585752" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
-                <Phone className="h-5 w-5" />
-                +91-6287585752
-              </a>
-              <a href="mailto:rabindrasharmarks@gmail.com" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
+              <a href="mailto:info@doipl.in" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
                 <Mail className="h-5 w-5" />
-                rabindrasharmarks@gmail.com
+                info@doipl.in
               </a>
               <div className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="h-5 w-5 mt-0.5" />
-                <span>Sarai Road Gandhi Maidan<br />near Reliance Mall, Dumka<br />Jharkhand 814101, India</span>
+                <span>Dwarka, Sector - 6<br />New Delhi 110078, India</span>
               </div>
             </div>
           </div>

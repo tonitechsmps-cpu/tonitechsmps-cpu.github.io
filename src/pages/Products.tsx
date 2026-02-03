@@ -12,6 +12,8 @@ const categories = [
   { id: 'polymer-compounds', name: 'Polymer Compounds' },
   { id: 'engineering-polymers', name: 'Engineering Polymers' },
   { id: 'specialty', name: 'Specialty' },
+  { id: 'spices', name: 'Spices' },
+  { id: 'herbs', name: 'Herbs' },
 ];
 
 const products = [
@@ -122,6 +124,71 @@ const products = [
     description: 'UV stabilizers, antioxidants, flame retardants and processing aids',
     hsCode: '3901.90',
     moq: '250 kg',
+  },
+  // Spices Category
+  {
+    id: 'chana-dal',
+    name: 'Chana Dal',
+    category: 'spices',
+    image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=300&fit=crop',
+    description: 'Premium quality split chickpeas, cleaned and sorted for export',
+    hsCode: '0713.20',
+    moq: '1000 kg',
+  },
+  {
+    id: 'mung-dal',
+    name: 'Mung Dal',
+    category: 'spices',
+    image: 'https://images.unsplash.com/photo-1612257416648-ee7a6c5b18c9?w=400&h=300&fit=crop',
+    description: 'High-grade green gram dal, ideal for cooking and processing',
+    hsCode: '0713.31',
+    moq: '1000 kg',
+  },
+  {
+    id: 'toor-dal',
+    name: 'Toor Dal',
+    category: 'spices',
+    image: 'https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=400&h=300&fit=crop',
+    description: 'Yellow pigeon pea split dal, rich in protein and nutrients',
+    hsCode: '0713.40',
+    moq: '1000 kg',
+  },
+  {
+    id: 'urad-dal',
+    name: 'Urad Dal',
+    category: 'spices',
+    image: 'https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&h=300&fit=crop',
+    description: 'Black gram dal, essential ingredient for South Indian cuisine',
+    hsCode: '0713.39',
+    moq: '1000 kg',
+  },
+  // Herbs Category
+  {
+    id: 'aloe-vera',
+    name: 'Aloe Vera',
+    category: 'herbs',
+    image: 'https://images.unsplash.com/photo-1596547609652-9cf5d8c10616?w=400&h=300&fit=crop',
+    description: 'Fresh aloe vera leaves and processed gel for cosmetic and health industries',
+    hsCode: '1211.90',
+    moq: '500 kg',
+  },
+  {
+    id: 'neem-datun',
+    name: 'Neem Datun',
+    category: 'herbs',
+    image: 'https://images.unsplash.com/photo-1567331711402-509c12c41959?w=400&h=300&fit=crop',
+    description: 'Natural neem twigs for traditional dental care, antibacterial properties',
+    hsCode: '1211.90',
+    moq: '250 kg',
+  },
+  {
+    id: 'neem-leaves',
+    name: 'Neem Leaves',
+    category: 'herbs',
+    image: 'https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?w=400&h=300&fit=crop',
+    description: 'Dried neem leaves for medicinal and agricultural applications',
+    hsCode: '1211.90',
+    moq: '500 kg',
   },
 ];
 
