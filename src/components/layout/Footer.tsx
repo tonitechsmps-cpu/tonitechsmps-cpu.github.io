@@ -26,8 +26,8 @@ const footerLinks = {
 const socialLinks = [
   { name: 'Facebook', icon: Facebook, href: '#' },
   { name: 'Twitter', icon: Twitter, href: '#' },
-  { name: 'LinkedIn', icon: Linkedin, href: '#' },
-  { name: 'Instagram', icon: Instagram, href: '#' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/dudhani-overseas-india-pvt-ltd/' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/dudhani_overseas/' },
 ];
 
 export function Footer() {
