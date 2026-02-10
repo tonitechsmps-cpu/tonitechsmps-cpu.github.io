@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const footerLinks = {
@@ -24,8 +24,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { name: 'Facebook', icon: Facebook, href: '#' },
-  { name: 'Twitter', icon: Twitter, href: '#' },
+  { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/share/1HRNb8AKSy/' },
   { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/dudhani-overseas-india-pvt-ltd/' },
   { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/dudhani_overseas/' },
 ];

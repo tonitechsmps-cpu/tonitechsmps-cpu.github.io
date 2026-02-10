@@ -18,6 +18,8 @@ import Logistics from "./pages/Logistics";
 import Documentation from "./pages/Documentation";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import Team from "./pages/Team";
+import TeamMember from "./pages/TeamMember";
 
 // Admin pages
 import AdminLogin from "./pages/admin/Login";
@@ -49,6 +51,8 @@ const App = () => (
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/logistics" element={<Logistics />} />
             <Route path="/documentation" element={<Documentation />} />
+            <Route path="/about/team" element={<Team />} />
+            <Route path="/about/team/:id" element={<TeamMember />} />
             <Route path="/blog" element={<Blog />} />
 
             {/* Admin routes */}
