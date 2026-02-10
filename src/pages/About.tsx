@@ -1,7 +1,8 @@
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Target, Eye, Users, Award, Globe, Handshake, ChevronRight, Lightbulb, Heart, Shield } from 'lucide-react';
+import { Target, Eye, Users, Award, Globe, Handshake, ChevronRight, Lightbulb, Heart, Shield, ArrowRight } from 'lucide-react';
+import { teamMembers } from '@/data/team';
 
 const milestones = [
   { year: '2018', title: 'Company Founded', description: 'Established as Dudhani Overseas India Private Limited' },
@@ -12,33 +13,6 @@ const milestones = [
   { year: '2024', title: 'Global Reach', description: 'Serving customers in 30+ countries' },
 ];
 
-const team = [
-  {
-    name: 'Rabindra Kumar Sharma',
-    role: 'Managing Director',
-    description: 'Founder with extensive experience in polymer industry',
-  },
-  {
-    name: 'Sapna Verma',
-    role: 'Director',
-    description: 'Overseeing business operations and strategy',
-  },
-  {
-    name: 'Khushboo Kumari',
-    role: 'Director',
-    description: 'Managing finance and administration',
-  },
-  {
-    name: 'Vijay Singh',
-    role: 'General Manager',
-    description: 'Leading production and quality control',
-  },
-  {
-    name: 'Gauri Shankar Sharma',
-    role: 'CEO',
-    description: 'Driving business growth and partnerships',
-  },
-];
 
 const values = [
   {
@@ -241,17 +215,35 @@ export default function About() {
               polymer manufacturing, quality management, and international trade.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {team.map((member) => (
-              <div key={member.name} className="bg-card rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-10 w-10 text-primary" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.slice(0, 6).map((member) => (
+              <Link
+                key={member.id}
+                to={`/about/team/${member.id}`}
+                className="bg-card rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow group"
+              >
+                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 bg-primary/10">
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <Users className="h-10 w-10 text-primary" />
+                    </div>
+                  )}
                 </div>
-                <h3 className="font-semibold text-lg text-foreground">{member.name}</h3>
+                <h3 className="font-semibold text-lg text-foreground group-hover:text-secondary transition-colors">{member.name}</h3>
                 <p className="text-secondary text-sm font-medium">{member.role}</p>
-                <p className="text-muted-foreground text-sm mt-2">{member.description}</p>
-              </div>
+                <p className="text-muted-foreground text-sm mt-2 line-clamp-2">{member.bio}</p>
+              </Link>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button variant="outline" asChild>
+              <Link to="/about/team">
+                View All Team Members
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

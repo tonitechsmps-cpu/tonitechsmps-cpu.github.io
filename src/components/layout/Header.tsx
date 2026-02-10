@@ -7,7 +7,14 @@ import logo from '@/assets/logo.png';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
+  { 
+    name: 'About Us', 
+    href: '/about',
+    children: [
+      { name: 'About Company', href: '/about' },
+      { name: 'Our Team', href: '/about/team' },
+    ]
+  },
   { 
     name: 'Products', 
     href: '/products',
@@ -15,6 +22,8 @@ const navigation = [
       { name: 'All Products', href: '/products' },
       { name: 'Color Masterbatch', href: '/products?category=color-masterbatch' },
       { name: 'Polymer Compounds', href: '/products?category=polymer-compounds' },
+      { name: 'Spices / Herbs', href: '/products?category=spices' },
+      { name: 'Chemical', href: '/products?category=engineering-polymers' },
       { name: 'Specialty', href: '/products?category=specialty' },
     ]
   },
