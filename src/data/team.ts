@@ -23,7 +23,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: 'sapna-verma',
     name: 'Sapna Verma',
-    role: 'Founder & Managing Director',
+    role: 'Director',
     bio: 'Ms. Sapna Verma has successfully spearheaded the company over the years to take it to its pinnacle as "the largest polymer compound manufacturer". Many years and many struggles later, Ms. Sapna Verma has aced her way to being one of the top names in this industry. She brings with her a wealth of experience and is quite easily the technical pillar of DUDHANI Industries Private Limited.',
     image: sapnaImg,
   },
