@@ -1,5 +1,5 @@
 export default defineConfig(({ mode }) => ({
-  base: './',   // 👈 YE LINE ADD KARO
+  base: '/',   // 👈 YE LINE ADD KARO
 
   server: {
     host: "::",
