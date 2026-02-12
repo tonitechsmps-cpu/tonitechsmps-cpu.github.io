@@ -32,7 +32,7 @@ export const teamMembers: TeamMember[] = [
     social: {
       instagram: '#',
       facebook: '#',
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/rabindra-kumar-sharma-86849546/',
       email: 'rabindra@doipl.in',
     },
   },
