@@ -1,6 +1,6 @@
 import rabindraImg from '@/assets/team/rabindra-kumar-sharma.png';
-import khusbooImg from '@/assets/team/vijay-kumar-singh.png';
-import vijayImg from '@/assets/team/khusboo-sharma.png';
+import khusbooImg from '@/assets/team/khusboo-sharma.png';
+import vijayImg from '@/assets/team/vijay-kumar-singh.png';
 import sapnaImg from '@/assets/team/sapna-verma.png';
 import anthoniImg from '@/assets/team/anthoni-soren.png';
 
