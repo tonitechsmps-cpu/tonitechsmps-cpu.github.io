@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, Users } from 'lucide-react';
+import { ChevronLeft, Users, Instagram, Facebook, Linkedin, Mail, Calendar } from 'lucide-react';
 import { teamMembers } from '@/data/team';
 
 export default function TeamMember() {
@@ -20,6 +20,9 @@ export default function TeamMember() {
       </Layout>
     );
   }
+
+  const joinDate = new Date(member.joiningDate);
+  const formattedDate = joinDate.toLocaleDateString('en-IN', { year: 'numeric', month: 'long' });
 
   return (
     <Layout>
@@ -48,7 +51,37 @@ export default function TeamMember() {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-2">{member.name}</h2>
-              <p className="text-secondary font-medium mb-6">{member.role}</p>
+              <p className="text-secondary font-medium mb-3">{member.role}</p>
+              
+              <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
+                <Calendar className="h-4 w-4" />
+                <span>Joined {formattedDate}</span>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex items-center gap-3 mb-6">
+                {member.social.instagram && (
+                  <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-muted hover:bg-secondary/10 text-muted-foreground hover:text-secondary transition-colors">
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                )}
+                {member.social.facebook && (
+                  <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-muted hover:bg-secondary/10 text-muted-foreground hover:text-secondary transition-colors">
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                )}
+                {member.social.linkedin && (
+                  <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-muted hover:bg-secondary/10 text-muted-foreground hover:text-secondary transition-colors">
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                )}
+                {member.social.email && (
+                  <a href={`mailto:${member.social.email}`} className="p-2 rounded-full bg-muted hover:bg-secondary/10 text-muted-foreground hover:text-secondary transition-colors">
+                    <Mail className="h-5 w-5" />
+                  </a>
+                )}
+              </div>
+
               <p className="text-muted-foreground leading-relaxed text-lg">{member.bio}</p>
             </div>
           </div>

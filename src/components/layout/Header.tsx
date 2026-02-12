@@ -20,11 +20,12 @@ const navigation = [
     href: '/products',
     children: [
       { name: 'All Products', href: '/products' },
-      { name: 'Color Masterbatch', href: '/products?category=color-masterbatch' },
-      { name: 'Polymer Compounds', href: '/products?category=polymer-compounds' },
       { name: 'Spices / Herbs', href: '/products?category=spices' },
-      { name: 'Chemical', href: '/products?category=engineering-polymers' },
+      { name: 'Chemical', href: '/products?category=chemical' },
+      { name: '↳ Color Masterbatch', href: '/products?category=color-masterbatch' },
+      { name: '↳ Polymer Compounds', href: '/products?category=polymer-compounds' },
       { name: 'Specialty', href: '/products?category=specialty' },
+      { name: 'Basmati', href: '/products?category=basmati' },
     ]
   },
   { name: 'Export Capabilities', href: '/export-capabilities' },
