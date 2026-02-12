@@ -86,9 +86,9 @@ export const teamMembers: TeamMember[] = [
     image: anthoniImg,
     joiningDate: '2020-09-15',
     social: {
-      instagram: '#',
-      facebook: '#',
-      linkedin: '#',
+      instagram: 'https://www.instagram.com/raizo_mark_anthoni/',
+      facebook: 'https://www.facebook.com/share/17ASNRecqB/',
+      linkedin: 'https://www.linkedin.com/in/anthoni-soren-61793728a/',
       email: 'anthoni@doipl.in',
     },
   },
