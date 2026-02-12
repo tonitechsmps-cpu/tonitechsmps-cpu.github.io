@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Mail } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import logo from '@/assets/logo.png';
@@ -21,9 +21,14 @@ const navigation = [
     children: [
       { name: 'All Products', href: '/products' },
       { name: 'Spices / Herbs', href: '/products?category=spices' },
-      { name: 'Chemical', href: '/products?category=chemical' },
-      { name: '↳ Color Masterbatch', href: '/products?category=color-masterbatch' },
-      { name: '↳ Polymer Compounds', href: '/products?category=polymer-compounds' },
+      { 
+        name: 'Chemical', 
+        href: '/products?category=chemical',
+        children: [
+          { name: 'Color Masterbatch', href: '/products?category=color-masterbatch' },
+          { name: 'Polymer Compounds', href: '/products?category=polymer-compounds' },
+        ]
+      },
       { name: 'Specialty', href: '/products?category=specialty' },
       { name: 'Basmati', href: '/products?category=basmati' },
     ]
@@ -96,15 +101,41 @@ export function Header() {
                   
                   {/* Dropdown */}
                   {item.children && openDropdown === item.name && (
-                    <div className="absolute top-full left-0 w-48 bg-card rounded-lg shadow-lg border border-border py-2 animate-fade-in">
+                    <div className="absolute top-full left-0 w-52 bg-card rounded-lg shadow-lg border border-border py-2 animate-fade-in z-50">
                       {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          to={child.href}
-                          className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-secondary transition-colors"
-                        >
-                          {child.name}
-                        </Link>
+                        'children' in child && child.children ? (
+                          <div
+                            key={child.name}
+                            className="relative group/sub"
+                          >
+                            <Link
+                              to={child.href}
+                              className="flex items-center justify-between px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-secondary transition-colors"
+                            >
+                              {child.name}
+                              <ChevronRight className="h-3 w-3" />
+                            </Link>
+                            <div className="absolute left-full top-0 w-48 bg-card rounded-lg shadow-lg border border-border py-2 hidden group-hover/sub:block z-50">
+                              {child.children.map((sub) => (
+                                <Link
+                                  key={sub.name}
+                                  to={sub.href}
+                                  className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-secondary transition-colors"
+                                >
+                                  {sub.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ) : (
+                          <Link
+                            key={child.name}
+                            to={child.href}
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-secondary transition-colors"
+                          >
+                            {child.name}
+                          </Link>
+                        )
                       ))}
                     </div>
                   )}
