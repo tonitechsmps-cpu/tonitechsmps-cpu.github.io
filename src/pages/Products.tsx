@@ -8,12 +8,17 @@ import { cn } from '@/lib/utils';
 
 const categories = [
   { id: 'all', name: 'All Products' },
-  { id: 'color-masterbatch', name: 'Color Masterbatch' },
-  { id: 'polymer-compounds', name: 'Polymer Compounds' },
-  { id: 'engineering-polymers', name: 'Engineering Polymers' },
+  { id: 'spices', name: 'Spices / Herbs' },
+  { 
+    id: 'chemical', 
+    name: 'Chemical',
+    children: [
+      { id: 'color-masterbatch', name: 'Color Masterbatch' },
+      { id: 'polymer-compounds', name: 'Polymer Compounds' },
+    ],
+  },
   { id: 'specialty', name: 'Specialty' },
-  { id: 'spices', name: 'Spices' },
-  { id: 'herbs', name: 'Herbs' },
+  { id: 'basmati', name: 'Basmati' },
 ];
 
 const products = [
@@ -65,7 +70,7 @@ const products = [
   {
     id: 'abs-compounds',
     name: 'ABS/SAN/ASA Compounds',
-    category: 'engineering-polymers',
+    category: 'color-masterbatch',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
     description: 'High-performance ABS, SAN, and ASA compounds for automotive and electronics',
     hsCode: '3903.30',
@@ -74,7 +79,7 @@ const products = [
   {
     id: 'pc-compounds',
     name: 'PC Compounds',
-    category: 'engineering-polymers',
+    category: 'polymer-compounds',
     image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=300&fit=crop',
     description: 'Polycarbonate based compounds with excellent impact resistance and clarity',
     hsCode: '3907.40',
@@ -83,7 +88,7 @@ const products = [
   {
     id: 'pet-compounds',
     name: 'PET Compounds',
-    category: 'engineering-polymers',
+    category: 'polymer-compounds',
     image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop',
     description: 'Polyethylene terephthalate compounds for packaging and fiber applications',
     hsCode: '3907.60',
@@ -162,11 +167,11 @@ const products = [
     hsCode: '0713.39',
     moq: '1000 kg',
   },
-  // Herbs Category
+  // Herbs (under spices category)
   {
     id: 'aloe-vera',
     name: 'Aloe Vera',
-    category: 'herbs',
+    category: 'spices',
     image: 'https://images.unsplash.com/photo-1596547609652-9cf5d8c10616?w=400&h=300&fit=crop',
     description: 'Fresh aloe vera leaves and processed gel for cosmetic and health industries',
     hsCode: '1211.90',
@@ -175,7 +180,7 @@ const products = [
   {
     id: 'neem-datun',
     name: 'Neem Datun',
-    category: 'herbs',
+    category: 'spices',
     image: 'https://images.unsplash.com/photo-1567331711402-509c12c41959?w=400&h=300&fit=crop',
     description: 'Natural neem twigs for traditional dental care, antibacterial properties',
     hsCode: '1211.90',
@@ -184,11 +189,30 @@ const products = [
   {
     id: 'neem-leaves',
     name: 'Neem Leaves',
-    category: 'herbs',
+    category: 'spices',
     image: 'https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?w=400&h=300&fit=crop',
     description: 'Dried neem leaves for medicinal and agricultural applications',
     hsCode: '1211.90',
     moq: '500 kg',
+  },
+  // Basmati Category
+  {
+    id: 'basmati-rice-1121',
+    name: '1121 Basmati Rice',
+    category: 'basmati',
+    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=300&fit=crop',
+    description: 'Premium 1121 Basmati Rice, extra-long grain with aromatic flavor for export',
+    hsCode: '1006.30',
+    moq: '1000 kg',
+  },
+  {
+    id: 'basmati-rice-sella',
+    name: 'Sella Basmati Rice',
+    category: 'basmati',
+    image: 'https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=400&h=300&fit=crop',
+    description: 'Parboiled Sella Basmati Rice, golden color with firm texture after cooking',
+    hsCode: '1006.30',
+    moq: '1000 kg',
   },
 ];
 
@@ -198,8 +222,16 @@ export default function Products() {
   
   const activeCategory = searchParams.get('category') || 'all';
 
+  const chemicalSubIds = ['color-masterbatch', 'polymer-compounds'];
   const filteredProducts = products.filter((product) => {
-    const matchesCategory = activeCategory === 'all' || product.category === activeCategory;
+    let matchesCategory = activeCategory === 'all';
+    if (!matchesCategory) {
+      if (activeCategory === 'chemical') {
+        matchesCategory = chemicalSubIds.includes(product.category);
+      } else {
+        matchesCategory = product.category === activeCategory;
+      }
+    }
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
@@ -230,18 +262,33 @@ export default function Products() {
             {/* Categories */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSearchParams(category.id === 'all' ? {} : { category: category.id })}
-                  className={cn(
-                    "px-4 py-2 rounded-full text-sm font-medium transition-colors",
-                    activeCategory === category.id
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-muted-foreground hover:bg-muted/80"
-                  )}
-                >
-                  {category.name}
-                </button>
+                <div key={category.id} className="flex flex-wrap gap-1">
+                  <button
+                    onClick={() => setSearchParams(category.id === 'all' ? {} : { category: category.id })}
+                    className={cn(
+                      "px-4 py-2 rounded-full text-sm font-medium transition-colors",
+                      activeCategory === category.id
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-muted-foreground hover:bg-muted/80"
+                    )}
+                  >
+                    {category.name}
+                  </button>
+                  {'children' in category && category.children && activeCategory === category.id && category.children.map((child) => (
+                    <button
+                      key={child.id}
+                      onClick={() => setSearchParams({ category: child.id })}
+                      className={cn(
+                        "px-3 py-2 rounded-full text-xs font-medium transition-colors",
+                        activeCategory === child.id
+                          ? "bg-secondary text-secondary-foreground"
+                          : "bg-muted/60 text-muted-foreground hover:bg-muted/80"
+                      )}
+                    >
+                      {child.name}
+                    </button>
+                  ))}
+                </div>
               ))}
             </div>
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
-import { Users } from 'lucide-react';
+import { Users, Instagram, Facebook, Linkedin, Mail } from 'lucide-react';
 import { teamMembers } from '@/data/team';
 
 export default function Team() {
@@ -20,32 +20,59 @@ export default function Team() {
         <div className="container-custom">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
-              <Link
+              <div
                 key={member.id}
-                to={`/about/team/${member.id}`}
                 className="group bg-muted rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="h-64 overflow-hidden bg-primary/5">
-                  {member.image ? (
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <Users className="h-20 w-20 text-muted-foreground" />
-                    </div>
-                  )}
-                </div>
+                <Link to={`/about/team/${member.id}`}>
+                  <div className="h-64 overflow-hidden bg-primary/5">
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Users className="h-20 w-20 text-muted-foreground" />
+                      </div>
+                    )}
+                  </div>
+                </Link>
                 <div className="p-6 text-center">
-                  <h3 className="font-semibold text-lg text-foreground group-hover:text-secondary transition-colors">
-                    {member.name}
-                  </h3>
+                  <Link to={`/about/team/${member.id}`}>
+                    <h3 className="font-semibold text-lg text-foreground group-hover:text-secondary transition-colors">
+                      {member.name}
+                    </h3>
+                  </Link>
                   <p className="text-secondary text-sm font-medium mt-1">{member.role}</p>
                   <p className="text-muted-foreground text-sm mt-3 line-clamp-2">{member.bio}</p>
+                  
+                  {/* Social Icons */}
+                  <div className="flex items-center justify-center gap-3 mt-4">
+                    {member.social.instagram && (
+                      <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-full text-muted-foreground hover:text-secondary transition-colors">
+                        <Instagram className="h-4 w-4" />
+                      </a>
+                    )}
+                    {member.social.facebook && (
+                      <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-full text-muted-foreground hover:text-secondary transition-colors">
+                        <Facebook className="h-4 w-4" />
+                      </a>
+                    )}
+                    {member.social.linkedin && (
+                      <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-full text-muted-foreground hover:text-secondary transition-colors">
+                        <Linkedin className="h-4 w-4" />
+                      </a>
+                    )}
+                    {member.social.email && (
+                      <a href={`mailto:${member.social.email}`} className="p-1.5 rounded-full text-muted-foreground hover:text-secondary transition-colors">
+                        <Mail className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
