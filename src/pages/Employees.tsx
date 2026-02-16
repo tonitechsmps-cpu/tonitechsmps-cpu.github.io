@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Users } from 'lucide-react';
 import { employees } from '@/data/employees';
@@ -19,7 +20,8 @@ export default function Employees() {
         <div className="container-custom">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {employees.map((emp) => (
-              <div
+              <Link
+                to={`/about/employees/${emp.id}`}
                 key={emp.id}
                 className="group bg-muted rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
               >
@@ -27,10 +29,10 @@ export default function Employees() {
                   <Users className="h-16 w-16 text-muted-foreground" />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="font-semibold text-lg text-foreground">{emp.name}</h3>
+                  <h3 className="font-semibold text-lg text-foreground group-hover:text-secondary transition-colors">{emp.name}</h3>
                   <p className="text-secondary text-sm font-medium mt-1">{emp.role}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -21,6 +21,7 @@ import NotFound from "./pages/NotFound";
 import Team from "./pages/Team";
 import TeamMember from "./pages/TeamMember";
 import Employees from "./pages/Employees";
+import EmployeeProfile from "./pages/EmployeeProfile";
 
 // Admin pages
 import AdminLogin from "./pages/admin/Login";
@@ -55,6 +56,7 @@ const App = () => (
             <Route path="/about/team" element={<Team />} />
             <Route path="/about/team/:id" element={<TeamMember />} />
             <Route path="/about/employees" element={<Employees />} />
+            <Route path="/about/employees/:id" element={<EmployeeProfile />} />
             <Route path="/blog" element={<Blog />} />
 
             {/* Admin routes */}
