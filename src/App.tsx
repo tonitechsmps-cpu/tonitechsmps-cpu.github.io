@@ -20,6 +20,7 @@ import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import Team from "./pages/Team";
 import TeamMember from "./pages/TeamMember";
+import Employees from "./pages/Employees";
 
 // Admin pages
 import AdminLogin from "./pages/admin/Login";
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/documentation" element={<Documentation />} />
             <Route path="/about/team" element={<Team />} />
             <Route path="/about/team/:id" element={<TeamMember />} />
+            <Route path="/about/employees" element={<Employees />} />
             <Route path="/blog" element={<Blog />} />
 
             {/* Admin routes */}
