@@ -38,8 +38,12 @@ export default function EmployeeProfile() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-10 items-start">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden bg-muted shrink-0 mx-auto md:mx-0 flex items-center justify-center">
-              <Users className="h-20 w-20 text-muted-foreground" />
-            </div>
+               {employee.image ? (
+                 <img src={employee.image} alt={employee.name} className="w-full h-full object-cover" />
+               ) : (
+                 <Users className="h-20 w-20 text-muted-foreground" />
+               )}
+             </div>
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-2">{employee.name}</h2>
               <p className="text-secondary font-medium mb-4">{employee.role}</p>
@@ -62,9 +66,13 @@ export default function EmployeeProfile() {
                 to={`/about/employees/${e.id}`}
                 className="bg-card rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow group"
               >
-                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 bg-primary/10 flex items-center justify-center">
-                  <Users className="h-10 w-10 text-primary" />
-                </div>
+                 <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 bg-primary/10 flex items-center justify-center">
+                   {e.image ? (
+                     <img src={e.image} alt={e.name} className="w-full h-full object-cover" />
+                   ) : (
+                     <Users className="h-10 w-10 text-primary" />
+                   )}
+                 </div>
                 <h3 className="font-semibold text-foreground group-hover:text-secondary transition-colors">{e.name}</h3>
                 <p className="text-secondary text-sm">{e.role}</p>
               </Link>

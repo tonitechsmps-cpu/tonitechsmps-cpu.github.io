@@ -26,8 +26,12 @@ export default function Employees() {
                 className="group bg-muted rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="h-48 overflow-hidden bg-primary/5 flex items-center justify-center">
-                  <Users className="h-16 w-16 text-muted-foreground" />
-                </div>
+                   {emp.image ? (
+                     <img src={emp.image} alt={emp.name} className="w-full h-full object-cover" />
+                   ) : (
+                     <Users className="h-16 w-16 text-muted-foreground" />
+                   )}
+                 </div>
                 <div className="p-6 text-center">
                   <h3 className="font-semibold text-lg text-foreground group-hover:text-secondary transition-colors">{emp.name}</h3>
                   <p className="text-secondary text-sm font-medium mt-1">{emp.role}</p>
