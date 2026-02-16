@@ -13,6 +13,7 @@ const navigation = [
     children: [
       { name: 'About Company', href: '/about' },
       { name: 'Our Team', href: '/about/team' },
+      { name: 'Our Employees', href: '/about/employees' },
     ]
   },
   { 
