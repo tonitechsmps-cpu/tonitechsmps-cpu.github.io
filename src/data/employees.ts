@@ -1,4 +1,6 @@
-import kalpnaMurmuImg from '@/assets/employees/kalpna-murmu.png';
+import michaelHembromImg from '@/assets/employees/michael-hembrom.jpg';
+import tursisiyusMurmuImg from '@/assets/employees/tursisiyus-murmu.jpg';
+import dhanajayKumarSharmaImg from '@/assets/employees/dhanajay-kumar-sharma.png';
 
 export interface Employee {
   id: string;
@@ -8,13 +10,7 @@ export interface Employee {
 }
 
 export const employees: Employee[] = [
-  { id: 'sunil-kumar-raut', name: 'Sunil Kumar Raut', role: 'Employee' },
-  { id: 'dheeraj-kumar', name: 'Dheeraj Kumar', role: 'Employee' },
-  { id: 'kalpna-murmu', name: 'Kalpna Murmu', role: 'Employee', image: kalpnaMurmuImg },
-  { id: 'gopesh-chandra-mallik', name: 'Gopesh Chandra Mallik', role: 'Employee' },
-  { id: 'dhanajay-kumar-sharma', name: 'Dhanajay Kumar Sharma', role: 'Employee' },
-  { id: 'shurti-kumari', name: 'Shurti Kumari', role: 'Employee' },
-  { id: 'chandna-goswami', name: 'Chandna Goswami', role: 'Employee' },
-  { id: 'putul-kumari', name: 'Putul Kumari', role: 'Employee' },
-  { id: 'maical-murmu', name: 'Maical Murmu', role: 'Employee' },
+  { id: 'michael-hembrom', name: 'Michael Hembrom', role: 'Employee', image: michaelHembromImg },
+  { id: 'tursisiyus-murmu', name: 'Tursisiyus Murmu', role: 'Employee', image: tursisiyusMurmuImg },
+  { id: 'dhanajay-kumar-sharma', name: 'Dhanajay Kumar Sharma', role: 'Employee', image: dhanajayKumarSharmaImg },
 ];
